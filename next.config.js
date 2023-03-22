@@ -1,8 +1,19 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-}
+const withPlugins = require("next-compose-plugins");
 
-module.exports = nextConfig
+const withPWA = require("next-pwa")({
+  dest: "public",
+});
+
+module.exports = withPlugins([
+  withPWA,
+  {
+    webpack: (config) => {
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: ["@svgr/webpack"],
+      });
+      return config;
+    },
+  },
+  // 추가 플러그인
+]);
