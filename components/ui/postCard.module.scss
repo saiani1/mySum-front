@@ -1,0 +1,94 @@
+@use '/styles/constants/colors';
+
+.wrap {
+  padding: 25px 0 30px;
+  border-bottom: 1px solid colors.$GRAYC;
+
+  .img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: colors.$GRAYD;
+  }
+
+  .middleWrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 11px 0 13px;
+
+    .category {
+      display: inline-block;
+      padding: 5px 11px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: colors.$WHITE;
+      background-color: colors.$GREENYELLOW;
+      border-radius: 3px;
+    }
+
+    .iconWrap {
+      display: flex;
+      column-gap: 5px;
+      align-items: center;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 23px;
+        height: 23px;
+      }
+    }
+
+  }
+
+  .idWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+
+    button {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: colors.$GRAY5;
+    }
+
+    span {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: colors.$GRAY5;
+    }
+  }
+
+  .contentWrap {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    margin-bottom: 8px;
+
+    p {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: colors.$GRAY6;
+    }
+
+    button {
+      font-size: 0.9rem;
+      color: colors.$GRAY8;
+    }
+  }
+
+  .comment {
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: colors.$GRAY9;
+  }
+
+  .time {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: colors.$GRAY9;
+  }
+}
