@@ -9,3 +9,4 @@ export { default as MenuBtn } from "./menu-icon.svg";
 export { default as MyPageBtn } from "./mypage-icon.svg";
 export { default as SettingBtn } from "./setting-icon.svg";
 export { default as SumBtn } from "./sum-icon.svg";
+export { default as CloseBtn } from "./close-icon.svg";

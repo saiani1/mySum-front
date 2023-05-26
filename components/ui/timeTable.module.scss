@@ -1,0 +1,43 @@
+@use '/styles/constants/colors';
+
+.timeTable {
+  flex-shrink: 0;
+  width: 80%;
+  border-spacing: 0 4px;
+  border-collapse: separate;
+
+  caption {
+    width: 100%;
+    height: 33px;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 2.5;
+    color: colors.$GRAY8;
+    background-color: colors.$POINT1;
+
+    span {
+      font-size: 0.75rem;
+      font-weight: 300;
+    }
+  }
+
+  tr {
+    font-size: 0.85rem;
+
+    .time {
+      color: colors.$GRAY9;
+      vertical-align: middle;
+    }
+
+    .acting {
+      height: 27px;
+      padding: 7px 0;
+      font-weight: 500;
+      color: colors.$WHITE;
+      text-align: center;
+      background-color: colors.$GREEN;
+      border-radius: 2px;
+    }
+  }
+}

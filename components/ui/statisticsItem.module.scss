@@ -1,0 +1,44 @@
+@use '/styles/constants/colors';
+
+.statisticsItemWrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  width: 100%;
+  padding: 20px 45px;
+  margin-bottom: 10px;
+  border: 1px solid colors.$GRAYD;
+  border-radius: 5px;
+
+  h2 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: colors.$GRAY9;
+  }
+
+  .statusWrap {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: colors.$GRAY9;
+
+    .accumulateStatus {
+      .time {
+        margin-right: 2px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: colors.$GRAY5;
+      }
+    }
+
+    .compareStatus {
+      font-weight: 500;
+
+      .arrow {
+        margin-right: 8px;
+        font-size: 0.7rem;
+        color: colors.$UP;
+      }
+    }
+  }
+}

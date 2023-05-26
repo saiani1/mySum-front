@@ -1,0 +1,50 @@
+@use '/styles/constants/colors';
+@use '/styles/mixins/position';
+
+.wrap {
+  margin-bottom: 50px;
+
+  .tabWrap {
+    position: relative;
+    display: flex;
+    margin-bottom: 30px;
+
+    li {
+      width: 50%;
+
+      button {
+        width: 100%;
+        padding: 6.5px 0;
+        font-size: 0.85rem;
+        color: colors.$GRAYA;
+      }
+
+      &.active {
+        button {
+          font-weight: 500;
+          color: colors.$WHITE;
+        }
+
+        &.monthly~.tabBar {
+          margin-left: 50%;
+        }
+      }
+
+      &.tabBar {
+        @include position.absolute(0 auto auto 0);
+        z-index: -1;
+        width: 50%;
+        height: 30px;
+        background-color: colors.$POINT2;
+        border-radius: 2px;
+        transition: all 0.2s;
+      }
+    }
+  }
+
+  .timeTableWrap {
+    display: flex;
+    column-gap: 25px;
+    overflow: auto;
+  }
+}

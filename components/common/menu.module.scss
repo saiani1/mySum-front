@@ -5,19 +5,24 @@
   @include position.absolute(auto 0 0 0);
   z-index: 1;
   display: flex;
+  align-items: flex-start;
   justify-content: space-around;
   height: 50px;
   padding: 0 20px;
   background-color: colors.$POINT3;
 
   li {
-    margin-top: 7px;
+    width: 40px;
+    height: 40px;
 
     a {
-      padding: 12px 9px 5px;
-      // background-color: pink;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
 
       svg {
+        display: block;
+        margin: 5px auto;
         pointer-events: none;
         fill: colors.$POINT2;
       }
@@ -25,40 +30,24 @@
 
     &.myPageBtn {
       &.active~.circle {
-        margin-left: 54px;
+        margin-left: 18%;
+      }
+
+      svg {
+        width: 20px;
       }
     }
 
     &.imageBtn {
-      &.active~.circle {
-        margin-left: 109.5px;
-      }
-    }
-
-    &.sumBtn {
       svg {
-        margin-top: 1px;
-      }
-
-      &.active~.circle {
-        margin-left: 167px;
-      }
-    }
-
-    &.settingBtn {
-      svg {
-        margin-top: 1px;
-      }
-
-      &.active~.circle {
-        margin-left: 225px;
+        width: 22px;
       }
     }
 
   }
 
   .circle {
-    @include position.absolute(auto auto 4px 18.5px);
+    @include position.absolute(auto auto 4px 6.5%);
     z-index: -1;
     width: 57px;
     height: 57px;

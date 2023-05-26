@@ -1,0 +1,19 @@
+@use '/styles/constants/colors';
+
+.categoryWrap {
+  display: flex;
+  column-gap: 15px;
+  margin-bottom: 30px;
+
+  .selectedCategory {
+    flex-shrink: 0;
+    width: auto;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: colors.$WHITE;
+    background-color: colors.$POINT2;
+    border-radius: 3px;
+  }
+}
