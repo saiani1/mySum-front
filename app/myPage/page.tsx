@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react";
-import PostCard from "../ui/PostCard";
+import PostCard from "../../components/ui/PostCard";
 
 import styles from "./myPage.module.scss";
 import { MenuBtn, MyPageBtn } from "../../public/assets/svg";

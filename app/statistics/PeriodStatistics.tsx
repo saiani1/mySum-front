@@ -1,8 +1,10 @@
+"use client";
+
 import { useState, useCallback } from "react";
 import classnames from "classnames/bind";
 
 import styles from "./periodStatistics.module.scss";
-import TimeTable from "../ui/TimeTable";
+import TimeTable from "../../components/ui/TimeTable";
 
 const cx = classnames.bind(styles);
 

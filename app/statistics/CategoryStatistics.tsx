@@ -1,6 +1,8 @@
+"use client";
+
 import styles from "./categoryStatistics.module.scss";
-import SelectBox from "../ui/SelectBox";
-import StatisticsItem from "../ui/StatisticsItem";
+import SelectBox from "../../components/ui/SelectBox";
+import StatisticsItem from "../../components/ui/StatisticsItem";
 
 const CategoryStatistics = () => {
   return (

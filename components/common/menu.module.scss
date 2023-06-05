@@ -1,59 +1,89 @@
 @use '/styles/constants/colors';
 @use '/styles/mixins/position';
 
-.wrap {
-  @include position.absolute(auto 0 0 0);
+.background {
+  @include position.fixed(auto 0 0 0);
   z-index: 1;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  height: 50px;
-  padding: 0 20px;
   background-color: colors.$POINT3;
 
-  li {
-    width: 40px;
-    height: 40px;
+  .wrap {
+    position: relative;
+    display: flex;
+    column-gap: 18px;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 350px;
+    height: 50px;
+    padding: 0 20px;
+    margin: 0 auto;
 
-    a {
-      display: inline-block;
-      width: 100%;
-      height: 100%;
+    li {
+      width: 40px;
+      height: 40px;
 
-      svg {
-        display: block;
-        margin: 5px auto;
-        pointer-events: none;
-        fill: colors.$POINT2;
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+
+        svg {
+          display: block;
+          margin: 5px auto;
+          pointer-events: none;
+          fill: colors.$POINT2;
+        }
+      }
+
+      &.myPageBtn {
+        &.active~.circle {
+          margin-left: 65px;
+        }
+
+        svg {
+          width: 20px;
+          margin-top: 4px;
+        }
+      }
+
+      &.imageBtn {
+        &.active~.circle {
+          margin-left: 131px;
+        }
+
+        svg {
+          width: 22px;
+          margin-top: 4px;
+        }
+      }
+
+      &.sumBtn {
+        &.active~.circle {
+          margin-left: 196.5px;
+        }
+      }
+
+      &.settingBtn {
+        &.active~.circle {
+          margin-left: 262.5px;
+        }
+
+        svg {
+          width: 21px;
+          height: 21px;
+        }
       }
     }
 
-    &.myPageBtn {
-      &.active~.circle {
-        margin-left: 18%;
-      }
-
-      svg {
-        width: 20px;
-      }
+    .circle {
+      @include position.absolute(auto auto 6px 15px);
+      z-index: -1;
+      width: 57px;
+      height: 57px;
+      background-color: colors.$WHITE;
+      border: 8px solid colors.$POINT3;
+      border-radius: 50%;
+      transition: ease-in-out 0.2s;
     }
-
-    &.imageBtn {
-      svg {
-        width: 22px;
-      }
-    }
-
-  }
-
-  .circle {
-    @include position.absolute(auto auto 4px 6.5%);
-    z-index: -1;
-    width: 57px;
-    height: 57px;
-    background-color: colors.$WHITE;
-    border: 8px solid colors.$POINT3;
-    border-radius: 50%;
-    transition: ease-in-out 0.2s;
   }
 }

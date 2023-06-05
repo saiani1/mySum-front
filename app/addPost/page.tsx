@@ -1,8 +1,10 @@
+"use client";
+
 import React from "react";
 
 import styles from "./addPost.module.scss";
 import { ImageBtn } from "../../public/assets/svg";
-import SelectBox from "../ui/SelectBox";
+import SelectBox from "../../components/ui/SelectBox";
 
 const AddPost = () => {
   return (

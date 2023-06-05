@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import Link from "next/link";
 
 import styles from "./loginForm.module.scss";
 
@@ -14,7 +17,7 @@ const LoginForm = () => {
         <button type="submit" className={styles.submitBtn}>
           로그인
         </button>
-        <button type="button">회원가입</button>
+        <Link href="signUp">회원가입</Link>
       </div>
       <div className={styles.socialBtnWrap}>
         <button type="button">

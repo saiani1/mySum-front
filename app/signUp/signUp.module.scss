@@ -1,0 +1,49 @@
+@use '/styles/constants/colors';
+@use '/styles/mixins/position';
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 180px 50px 0;
+
+  input {
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid colors.$GRAYD;
+
+    &::placeholder {
+      font-size: 0.95rem;
+      color: colors.$GRAYA;
+    }
+  }
+
+  h1 {
+    margin-bottom: 45px;
+    text-align: center;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 0.97rem;
+    font-weight: 500;
+    color: colors.$WHITE;
+    text-align: center;
+    background-color: colors.$POINT2;
+    border-radius: 3px;
+
+    &.submitBtn {
+      margin-top: 20px;
+      background-color: colors.$POINT3;
+    }
+  }
+
+  .inputWrap {
+    display: flex;
+    column-gap: 10px;
+
+    button {
+      flex-shrink: 0;
+    }
+  }
+}

@@ -1,9 +1,11 @@
+"use client";
+
 import React from "react";
-import PostCard from "../ui/PostCard";
+import PostCard from "../components/ui/PostCard";
 
 import styles from "./home.module.scss";
 
-const Home = () => {
+const Page = () => {
   return (
     <div className={styles.wrap}>
       <h1>
@@ -18,4 +20,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Page;

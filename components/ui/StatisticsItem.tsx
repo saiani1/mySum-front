@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./statisticsItem.module.scss";
 
 const StatisticsItem = () => {

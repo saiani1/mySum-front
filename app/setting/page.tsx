@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./setting.module.scss";
 import {
   MyPageBtn,
